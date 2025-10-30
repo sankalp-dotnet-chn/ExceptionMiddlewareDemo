@@ -50,7 +50,7 @@ namespace ExceptionMiddlewareAdvanced.Middleware
                 _ => (int)HttpStatusCode.InternalServerError
             };
 
-            // Details added only in Development mode
+            // checks and add details only in Development mode
             if (_env.IsDevelopment())
             {
                 response.Details = exception switch
